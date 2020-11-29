@@ -9,7 +9,7 @@ const server = new WebSocket.Server({
 });
 
 server.addListener("listening", () => {
-  console.log("WS Listening on port %s", PORT);
+  console.log("Websocket server listening on port %s", PORT);
 });
 
 server.on("connection", (connection) => {

@@ -16,14 +16,14 @@ This is a simple Arduino project to send voltage status of A0 input pin (connect
 git clone https://github.com/matinzd/nodejs-esp8266-analog-read.git
 cd nodejs-esp8266-analog-read
 npm i
-node ./src/app.js
+npm start
 ```
 
 2- Starting Arduino Project
 
 Open file below with the Arduino IDE:
 ```bash
-arduino/project/project.imo
+arduino/project/project.ino
 ```
 
 3- Assembly
