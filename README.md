@@ -26,7 +26,9 @@ Open file below with the Arduino IDE:
 arduino/project/project.imo
 ```
 
-3- Connect second pin of potantiometer to A0 pin and connect two other pins to 5V and GND.
+3- Assembly
+
+Connect second pin of potantiometer to A0 pin and connect two other pins to 5V and GND.
 
 4- Start your device.
 
