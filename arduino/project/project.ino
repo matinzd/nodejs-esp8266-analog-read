@@ -70,6 +70,10 @@ void connectToWebsocketServer() {
   webSocket.enableHeartbeat(15000, 3000, 2);
 }
 
+float getVoltage(int sensorValue) {
+  return sensorValue * (5.0 / 1023.0);
+}
+
 void setup() {
   Serial.begin(115200);
   Serial.setDebugOutput(true);
@@ -79,9 +83,7 @@ void setup() {
 
 void loop() {
   webSocket.loop();
-  int sensorValue = analogRead(A0);
-  float voltage = sensorValue * (5.0 / 1023.0);
-  String voltageStr = String(voltage);
+  String voltageStr = String(getVoltage(analogRead(A0)));
   String log = "Voltage from arduino " + voltageStr;
   Serial.println(log);
   webSocket.sendTXT(voltageStr);
